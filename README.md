@@ -6,4 +6,4 @@ Include a function to set the value displayed in the menu.
 Use 2 buttons right/left to navigate
 and 2 buttons up/down to set values displayed
 
-![](images/LCDmenu Setup_bb.jpg)
+![](/images/LCDmenu Setup_bb.jpg)
