@@ -10,4 +10,6 @@ You need to install these two libraries:
 - LiquidCrystal
 - Pushbutton by Pololu
 
+## Template schematic
+
 ![image](/images/LCDmenu_Setup_bb.jpg)
