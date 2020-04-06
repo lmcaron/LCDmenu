@@ -6,7 +6,7 @@ Include a function to set the value displayed in the menu.
 Use 2 buttons right/left to navigate
 and 2 buttons up/down to set values displayed
 
-You need to install these two libraries
+You need to install these two libraries:
 - LiquidCrystal
 - Pushbutton by Pololu
 
