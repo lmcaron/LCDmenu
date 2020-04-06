@@ -1,5 +1,5 @@
 /*
- Template to setup multiple page in a menu with 16x2 LCD display.
+ Template to setup a multiple pages menu with 16x2 LCD display.
  Include a function to set the value displayed.
  Use 2 buttons right/left to navigate
  and 2 buttons up/down to set the value displayed
@@ -18,8 +18,8 @@
  * 
  * up button to digital pin 8
  * down button to digital pin 9 
- * right button to digital pin 10
- * left button to digital pin 13
+ * right button to digital pin 6
+ * left button to digital pin 7
 
  Library originally added 18 Apr 2008
  by David A. Mellis
@@ -46,8 +46,8 @@ const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 Pushbutton up(8);
 Pushbutton down(9);
-Pushbutton right(10);
-Pushbutton left(13);
+Pushbutton right(6);
+Pushbutton left(7);
 
 byte plein[8] = {
   0b11111,
@@ -143,16 +143,16 @@ void setup() {
 
 void loop() {
   // read 4 buttons
-  if(up.getSingleDebouncedRelease()){
+  if(right.getSingleDebouncedRelease()){
    changeMenu(1);
   }
-  if(down.getSingleDebouncedRelease()){
+  if(left.getSingleDebouncedRelease()){
     changeMenu(0);
   }
-  if(right.getSingleDebouncedRelease()){
+  if(up.getSingleDebouncedRelease()){
     setValue(1);
   }
-  if(left.getSingleDebouncedRelease()){
+  if(down.getSingleDebouncedRelease()){
     setValue(0);
   }
   //example: update the actual value displays in menu1 each 3sec
